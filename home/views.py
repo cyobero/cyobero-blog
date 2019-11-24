@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from posts.models import Post
 from django.shortcuts import get_list_or_404
-from django.core.paginator import Paginnator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # Create your views here.
