@@ -28,7 +28,23 @@
 {% endblock %}
 
 {% block page-content %}
+<!-- Page Content -->
+<div class="container">
+	<div class="row">
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+	<h1 class="page-title">{{ post.title }}</h1>
+	
+	<div id="post-content">
+	<p>{{ post.body }}</p>
+	</div>
 
+	</div>
+	<div class="col-lg-2"></div>
+
+	</div>
+
+</div>
 {% endblock %}
 </body>
 
