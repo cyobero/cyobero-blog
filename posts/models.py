@@ -8,9 +8,9 @@ from django.utils.text import slugify
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(null=True, upload_to="images")    
+    image = models.ImageField(null=True, upload_to="images")
     body = models.TextField()
     caption = models.CharField(max_length=150)
 
@@ -21,7 +21,4 @@ class Post(models.Model):
 
     def __unicode__(self):
         return self.title
-
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
 
