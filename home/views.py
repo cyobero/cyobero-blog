@@ -6,7 +6,6 @@ from posts.models import Post
 from django.shortcuts import get_list_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-
 # Create your views here.
 def home(request):
     # Fetch posts and only display the latest five posts per page.
@@ -23,4 +22,6 @@ def home(request):
         # if page is out of range then deliver last page of results
         posts = paginator.page(paginator.num_pages)
     return render(request, 'home.html', {'posts': posts})
+
+
 
