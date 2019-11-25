@@ -18,10 +18,12 @@ from django.contrib import admin
 from home.views import home
 from django.conf import settings
 from django.conf.urls.static import static
+from posts.views import post
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
+    url(r'^post/(?P<slug>[-\w]+)', post, name='post')
 ]
 
 if settings.DEBUG:
