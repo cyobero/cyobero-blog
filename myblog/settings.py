@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'posts',
     'about',
+    'chatbot',
 ]
 
 MIDDLEWARE = [
